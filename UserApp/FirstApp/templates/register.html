@@ -1,0 +1,32 @@
+{% include 'navbar.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register page</title>
+</head>
+<body>
+
+<center>
+    <form action="{% url 'register' %}" method="POST">
+        <h1>Register</h1>
+        {% csrf_token %}
+        <!-- {{ form.as_p }} -->
+        User Name <br>{{ form.username }}<br>
+        First Name <br> {{ form.first_name }}<br>
+        Last Name <br> {{ form.last_name }}<br>
+        Email <br> {{ form.email }}<br>
+        <p>Your password must be unique (You can't use user name,firstname or any name in your password </p>
+        Password<br> {{ form.password1 }}<br>
+        Conform password <br> {{ form.password2 }}<br><br>
+
+
+
+        <input type="submit" name="submit">
+    </form>
+</center>
+
+</body>
+</html>
+{% endblock content %}
