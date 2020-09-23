@@ -1,0 +1,5 @@
+1.First install django by using (pip install django)
+2.After that (cd UserApp)
+3.run this command (python manage.py makemigrations)
+4.After that (python manage.py migrate)
+5.Then finally (python manage.py runserver 8004)
